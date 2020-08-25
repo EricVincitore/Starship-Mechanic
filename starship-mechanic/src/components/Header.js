@@ -6,6 +6,6 @@ function Header () {
             <a className="navbar-brand" href="/">Starship Mechanic</a>
         </nav>
     )
-}
+};
 
 export default Header;

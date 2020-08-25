@@ -9,6 +9,6 @@ function Jumbotron () {
             </div>
         </div>
     )
-}
+};
 
 export default Jumbotron;

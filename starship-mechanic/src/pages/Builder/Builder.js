@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
-import BuildHeader from '../components/BuildHeader';
-import Footer from '../components/Footer';
+import BuildHeader from '../../components/BuildHeader';
+import Footer from '../../components/Footer';
+import AllParts from '../../components/AllParts';
+import './Builder.css'
 
-class MainMenu extends Component {
+class Builder extends Component {
 
     state = {
         parts: [
@@ -97,10 +99,31 @@ class MainMenu extends Component {
         ]
     };
 
+    markSelected = id => {
+        this.setState({
+            parts: this.state.parts.map(part => {
+                if (part.id === id) {
+                    part.selected =!part.selected;
+                }
+                return part;
+            })
+        })
+    }
+
     render () {
         return (
-            <div className="MainMenu">
+            <div className="Builder">
                 <BuildHeader />
+                <div className="container">
+                    <div className="row">
+                        <AllParts
+                            parts={this.state.parts}
+                            markSelected={this.markSelected}
+                        />
+
+                    </div>
+                </div>
+
                 <Footer />
             </div>
             
@@ -109,4 +132,4 @@ class MainMenu extends Component {
     }
 }
 
-export default MainMenu;
+export default Builder;

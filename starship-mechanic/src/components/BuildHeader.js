@@ -19,6 +19,6 @@ function BuildHeader () {
             </div>
         </nav>
     )
-}
+};
 
 export default BuildHeader;

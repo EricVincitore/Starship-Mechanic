@@ -19,7 +19,7 @@ class Footer extends Component {
             
             </nav>
         );
-    }
-}
+    };
+};
 
 export default Footer;
