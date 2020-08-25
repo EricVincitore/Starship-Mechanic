@@ -18,7 +18,7 @@ class SpacePart extends Component {
         return (
             <div>
                 <div className="card" onClick={this.props.markSelected.bind(this, id)}>
-                    <img className="card-img-top" src={img} alt={name}/>
+                    <img className="card-img-top space-img" src={img} alt={name}/>
                     <div className="card-body">
                         <h5 className="card-title">{name}</h5>
                         <p className="card-text">Price in USD: {price}</p>
