@@ -14,14 +14,15 @@ class Modal extends Component {
 
         return (
             <div className="backdropStyle">
+                <div className="container">
                 <div className="row">
                     <div className="col-sm-3"/>
                     <div className="col-sm-6">
                         <div className="builderModal">
                             <div className="Row">
-                                <div classNAme="col-sm-4"/>  
+                                <div className="col-sm-4"/>  
                                 Build Report
-                                <div classNAme="col-sm-4"/>  
+                                <div className="col-sm-4"/>  
                             </div>
                             <div className="builderModalStyle">
                             {this.props.children}
@@ -32,6 +33,7 @@ class Modal extends Component {
                         </div>
                     </div>
                     <div className="col-sm-3"/>
+                </div>
                 </div>
             </div>
         )

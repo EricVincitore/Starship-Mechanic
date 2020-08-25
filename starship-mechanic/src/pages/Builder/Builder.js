@@ -39,11 +39,11 @@ class Builder extends Component {
                 img: "https://emailtuna.com/images/newsletter/6f7/6f7aa63c13dbb8c972c00db0364f3cf3.jpg"
             },
             {
-                id:5,
+                id:4,
                 name: "Warp Drive",
                 selected: false,
-                price: 75000000,
-                img: "https://lh3.ghttps://cdn.mos.cms.futurecdn.net/dv3txnCKTcakbgL3mGQF2C.jpgoogleusercontent.com/proxy/ORxGbinFXGeMEpbj04cg3cHZFfTgATOO_zek9kFeE4zR71Udvv9JTRGRfz3ESS_nipo-DopgfriGt7gcSi0uUxQ4aBVTpv-Hv1iNbc39laEo58Rqg8MEY_bHDfry_hux18zZ2iPAaVYyOdo"
+                price: 700000000,
+                img: "https://www.citytech.cuny.edu/physicsworkshop/images/day3.jpg"
             },
             {
                 id:6,
@@ -143,6 +143,7 @@ class Builder extends Component {
             <div className="Builder">
                 <Header />
                 <div className="container">
+                    <br/>
                     <div className="row">
                         <AllParts
                             parts={this.state.parts}

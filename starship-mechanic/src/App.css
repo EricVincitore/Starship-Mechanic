@@ -48,5 +48,14 @@
 
 .builderModalFooter {
   position: 'absolute';
-  bottom: 5%
+  bottom: 5
+}
+
+.space-img {
+  height:200px;
+}
+
+.card{
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
