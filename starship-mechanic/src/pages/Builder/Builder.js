@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import AllParts from '../../components/AllParts';
 import Modal from './../../components/Modal/Modal';
+import ExitModal from './../../components/ExitModal/ExitModal'
 import './index.css'
 
 class Builder extends Component {
@@ -130,6 +131,13 @@ class Builder extends Component {
         })
     }
 
+    showExitModal = () => {
+        this.setState({
+            ...this.state,
+            exitShow: !this.state.exitShow
+        })
+    }
+
     render () {
         return (
             <div className="Builder">
@@ -146,12 +154,12 @@ class Builder extends Component {
                         <div className="col-sm-4"/>
                         <button type="button" className="btn btn-success" onClick={this.showModal} value ="Show Modal">Show Build Starship</button>
                         <div className="col-sm-1"/>
-                        <button type="button" className="btn btn-danger">Exit Builder</button>
+                        <button type="button" className="btn btn-danger" onClick={this.showExitModal} value="show Exit Modal">Exit Builder</button>
                         <div className="col-sm-4"/>
                     </div>
                 </div>
                 <Modal onClose={this.showModal} show={this.state.show}> This message is form modal</Modal>
-
+                <ExitModal showExit={this.state.exitShow}>This is from Exit Modal</ExitModal>
                 <br/>
 
                 <Footer />

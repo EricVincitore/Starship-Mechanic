@@ -1,15 +1,12 @@
-import React, {Component} from 'react';
+import React,{Component} from 'react';
+import {Link} from 'react-router-dom'
 
+class ExitModal extends Component {
 
-class Modal extends Component {
-
-    onClose = (e) => {
-        this.props.onClose && this.props.onClose(e);
-    }
     render() {
 
-        if(!this.props.show) {
-            return null
+        if(!this.props.showExit){
+            return null;
         }
 
         return (
@@ -18,15 +15,10 @@ class Modal extends Component {
                     <div className="col-sm-3"/>
                     <div className="col-sm-6">
                         <div className="builderModal">
-                            <div className="Row">
-                                <div classNAme="col-sm-4"/>  
-                                Build Report
-                                <div classNAme="col-sm-4"/>  
-                            </div>
                             <div className="builderModalStyle">
                             {this.props.children}
                                 <div className="builderModalFooter">
-                                    <button className="btn btn-secondary" onClick={(e) => {this.onClose(e)}}>Close</button>
+                                    <Link to="/" className="btn btn-secondary">Exit to Main Menu</Link>
                                 </div>
                             </div>
                         </div>
@@ -36,6 +28,7 @@ class Modal extends Component {
             </div>
         )
     }
+
 }
 
-export default Modal;
+export default ExitModal;

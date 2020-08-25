@@ -12,7 +12,8 @@ class AllParts extends Component {
                 key={part.id}
                 id={part.id}
                 name={part.name}
-                image={part.img}
+                img={part.img}
+                price={part.price}
                 selected={part.selected}
                 markSelected = {this.props.markSelected}
                 />
