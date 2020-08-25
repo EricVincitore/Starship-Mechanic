@@ -16,6 +16,7 @@ class AllParts extends Component {
                 selected={part.selected}
                 markSelected = {this.props.markSelected}
                 />
+                
             </div>
         ))
     };

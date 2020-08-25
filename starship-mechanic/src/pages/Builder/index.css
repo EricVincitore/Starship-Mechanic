@@ -1,0 +1,17 @@
+.container{
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+    
+body {
+    background-image: url("https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/281990/b30c69e49437b45ca2e91fac6aaeaadfcaa48bfc.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+}

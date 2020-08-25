@@ -3,7 +3,7 @@ import Jumbotron from '../../components/Jumbotron';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import {Link} from 'react-router-dom';
-import './MainMenu.css'
+import './index.css'
 
 class MainMenu extends Component {
 

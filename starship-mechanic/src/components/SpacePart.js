@@ -14,6 +14,7 @@ class SpacePart extends Component {
 
     render () {
         const {id, name, price, img, selected} = this.props;
+        //console.log(id,name, price, img, selected);
         return (
             <div>
                 <div className="card" onClick={this.props.markSelected.bind(this, id)}>
@@ -32,7 +33,7 @@ class SpacePart extends Component {
 };
 
 SpacePart.propTypes = {
-    part: PropTypes.object.isRequired
+    parts: PropTypes.object.isRequired
 };
 
 export default SpacePart;

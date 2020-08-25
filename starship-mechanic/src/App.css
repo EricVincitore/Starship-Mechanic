@@ -2,7 +2,6 @@
   text-align: center;
 }
 
-
 .navbar {
   width: 100%;
   margin-left: 0%;
@@ -15,4 +14,39 @@
   align-items: center;
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.backdropStyle {
+  position: fixed;
+  top:0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  background-color: rgba(0,0,0,0.5);
+  padding: 50;
+}
+
+.builderModal {
+  position: fixed;
+  top:25%;
+  bottom: 25%;
+  left: 25%;
+  right: 25%;
+  background-color: white;
+  padding: 50;
+}
+
+.builderModalStyle {
+  background-color:'#fff';
+  border-radius: 5;
+  max-width: 500;
+  min-height:300;
+  margin: '0 auto';
+  padding:'30';
+  position:"relative"
+}
+
+.builderModalFooter {
+  position: 'absolute';
+  bottom: 5%
 }

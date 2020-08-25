@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import BuildHeader from '../../components/BuildHeader';
+import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import AllParts from '../../components/AllParts';
-import './Builder.css'
+import Modal from './../../components/Modal/Modal';
+import './index.css'
 
 class Builder extends Component {
 
@@ -79,8 +80,6 @@ class Builder extends Component {
                 selected: false,
                 price: 5000000,
                 img: "https://img.freepik.com/free-photo/blue-hologram-robot-head-artificial-intelligence-concept-neural-networks-autopilot-robotization-industrial-revolution-4-0-3d-illustration-3d-rendering_99433-109.jpg?size=626&ext=jpg"
-
-
             },
             {
                 id:11,
@@ -96,7 +95,9 @@ class Builder extends Component {
                 img: "https://images-na.ssl-images-amazon.com/images/I/61Fkg7O4%2B2L._AC_SX466_.jpg"
 
             }
-        ]
+        ],
+        selectedParts: [],
+        show: false
     };
 
     markSelected = id => {
@@ -108,21 +109,50 @@ class Builder extends Component {
                 return part;
             })
         })
+    };
+
+    finalizeSelectedParts = (id, selected) => {
+        this.state.parts.forEach(part => {
+            if (part.selected === true) {
+                console.log(part.name)
+                this.setState({
+                    selectedParts: this.part.id
+                })
+            }
+            console.log(this.state.selectedParts)       
+        })
+    };
+
+    showModal = () => {
+        this.setState({
+            ...this.state,
+            show: !this.state.show
+        })
     }
 
     render () {
         return (
             <div className="Builder">
-                <BuildHeader />
+                <Header />
                 <div className="container">
                     <div className="row">
                         <AllParts
                             parts={this.state.parts}
                             markSelected={this.markSelected}
                         />
-
+                    </div>
+                    <br/>
+                    <div className="row">
+                        <div className="col-sm-4"/>
+                        <button type="button" className="btn btn-success" onClick={this.showModal} value ="Show Modal">Show Build Starship</button>
+                        <div className="col-sm-1"/>
+                        <button type="button" className="btn btn-danger">Exit Builder</button>
+                        <div className="col-sm-4"/>
                     </div>
                 </div>
+                <Modal onClose={this.showModal} show={this.state.show}> This message is form modal</Modal>
+
+                <br/>
 
                 <Footer />
             </div>
