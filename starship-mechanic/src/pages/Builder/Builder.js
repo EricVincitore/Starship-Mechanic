@@ -3,8 +3,8 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import AllParts from '../../components/AllParts';
 import Modal from './../../components/Modal/Modal';
+import ParticlesBg from "particles-bg";
 import ExitModal from './../../components/ExitModal/ExitModal'
-import './index.css'
 
 class Builder extends Component {
 
@@ -153,9 +153,9 @@ class Builder extends Component {
                     <br/>
                     <div className="row">
                         <div className="col-sm-4"/>
-                        <button type="button" className="btn btn-success" onClick={this.showModal} value ="Show Modal">Show Build Starship</button>
+                        <button type="button" className="btn btn-secondary btn-gray" onClick={this.showModal} value ="Show Modal">Show Build Starship</button>
                         <div className="col-sm-1"/>
-                        <button type="button" className="btn btn-danger" onClick={this.showExitModal} value="show Exit Modal">Exit Builder</button>
+                        <button type="button" className="btn btn-light" onClick={this.showExitModal} value="show Exit Modal">Exit Builder</button>
                         <div className="col-sm-4"/>
                     </div>
                 </div>
@@ -164,6 +164,7 @@ class Builder extends Component {
                 <br/>
 
                 <Footer />
+                <ParticlesBg type="cobweb" color="#5dbcd2" bg={true}/>
             </div>
             
 

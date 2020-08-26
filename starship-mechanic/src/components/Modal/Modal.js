@@ -27,7 +27,7 @@ class Modal extends Component {
                             <div className="builderModalStyle">
                             {this.props.children}
                                 <div className="builderModalFooter">
-                                    <button className="btn btn-secondary" onClick={(e) => {this.onClose(e)}}>Close</button>
+                                    <button className="btn btn-secondary" onClick={(e) => {this.onClose(e)}}>Return to Builder</button>
                                 </div>
                             </div>
                         </div>
