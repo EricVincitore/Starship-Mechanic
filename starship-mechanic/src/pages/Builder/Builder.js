@@ -176,9 +176,9 @@ class Builder extends Component {
                         Selected Parts
                     </div>
                     <div className="row">
-                        <ul className="list">
+                        <div className="list">
                             {this.getFinalNames()}
-                        </ul>
+                        </div>
                     </div>
                     <hr/>
                     <div className="row">
@@ -190,9 +190,9 @@ class Builder extends Component {
                         Selected Parts
                     </div>
                     <div className="row">
-                        <ul className="list">
+                        <div className="list">
                             {this.getFinalNames()}
-                        </ul>
+                        </div>
                     </div>
                     <hr/>
                     <div className="row">

@@ -130,3 +130,22 @@ body {
   right:    5%;
   bottom:   5%;
 }
+
+@media screen and (max-width: 640px) {
+
+  .btn-gray {
+    margin-bottom: 5%;
+  }
+
+  .list {
+    text-align: left;
+    margin-right: 0%;
+  }
+
+  .endModalBtn {
+    position: relative;
+    margin-bottom: 5%;
+    align-content: center;
+  }
+
+}
