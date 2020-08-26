@@ -138,10 +138,14 @@ class Builder extends Component {
 
     showExitModal = () => {
 
-        this.finalStats();
+        let finalSelection = this.state.parts.filter(parts => parts.selected === true);
+
+        let finalPrice = finalSelection.reduce((total, part) => total + part.price,0);
 
         this.setState({
             ...this.state,
+            selectedParts: finalSelection,
+            priceTotal: finalPrice,
             exitShow: !this.state.exitShow
         });
     }
@@ -176,12 +180,24 @@ class Builder extends Component {
                             {this.getFinalNames()}
                         </ul>
                     </div>
+                    <hr/>
                     <div className="row">
                         Price Total in USD: {this.state.priceTotal}
                     </div>
                 </Modal>
                 <ExitModal showExit={this.state.exitShow}>
-                    This is from Exit Modal
+                    <div className="row listTitle"> 
+                        Selected Parts
+                    </div>
+                    <div className="row">
+                        <ul className="list">
+                            {this.getFinalNames()}
+                        </ul>
+                    </div>
+                    <hr/>
+                    <div className="row">
+                        Price Total in USD: {this.state.priceTotal}
+                    </div>
                 </ExitModal>
                 <br/>
 
