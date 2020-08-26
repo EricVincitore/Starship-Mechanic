@@ -15,8 +15,15 @@ class ExitModal extends Component {
                     <div className="col-sm-3"/>
                     <div className="col-sm-6">
                         <div className="builderModal">
+                            <div className="row modalTitle">
+                                    <div className="col-sm-3"/> 
+                                    <div className="col-sm-6">
+                                        Final Report
+                                    </div> 
+                                    <div className="col-sm-3"/>  
+                            </div>
                             <div className="builderModalStyle">
-                            {this.props.children}
+                                {this.props.children}
                                 <div className="builderModalFooter">
                                     <Link to="/" className="btn btn-secondary">Exit to Main Menu</Link>
                                 </div>

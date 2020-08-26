@@ -29,11 +29,16 @@
 .builderModal {
   position: fixed;
   top:25%;
-  bottom: 25%;
+  bottom: 30%;
   left: 25%;
   right: 25%;
-  background-color: white;
+  padding: 5%, 5%, 5%, 5%;
+  background-color: aliceblue;
   padding: 50;
+  text-align: center;
+}
+.modalTitle{
+  text-align: center;
 }
 
 .builderModalStyle {
@@ -43,13 +48,19 @@
   margin: '0 auto';
   padding:'30';
   position:"relative";
-  background-color: aliceblue;
+}
+
+.modalTitle{
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
 }
 
 .builderModalFooter {
   position: 'absolute';
   bottom: 5
 }
+
 
 .space-img {
   height:200px;
@@ -62,9 +73,14 @@
 }
 
 .jumbotron {
-  background-image: url("https://i2.wp.com/csengineermag.com/wp-content/uploads/2020/04/AdobeStock_302399784.jpeg?fit=3600%2C1800&ssl=1");
+  background-image: url("https://blenderartists.org/uploads/default/original/4X/7/e/2/7e2d7bea4ac21388c4a96e1371f375c4ce00094b.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
   text-align: center;
-  color: white;
+  color: aliceblue;
 }
 
 .container{

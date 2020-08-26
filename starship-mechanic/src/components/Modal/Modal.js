@@ -19,13 +19,15 @@ class Modal extends Component {
                     <div className="col-sm-3"/>
                     <div className="col-sm-6">
                         <div className="builderModal">
-                            <div className="Row">
-                                <div className="col-sm-4"/>  
-                                Build Report
-                                <div className="col-sm-4"/>  
+                            <div className="row modalTitle">
+                                <div className="col-sm-3"/> 
+                                <div className="col-sm-6">
+                                    Build Report
+                                </div> 
+                                <div className="col-sm-3"/>  
                             </div>
                             <div className="builderModalStyle">
-                            {this.props.children}
+                                {this.props.children}
                                 <div className="builderModalFooter">
                                     <button className="btn btn-secondary" onClick={(e) => {this.onClose(e)}}>Return to Builder</button>
                                 </div>
