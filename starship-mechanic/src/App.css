@@ -119,6 +119,11 @@ body {
 
 .list {
   text-align: left;
+  border-left: 5px solid #4c647c;
+}
+
+li {
+  list-style-type: none;
 }
 
 .listTitle {

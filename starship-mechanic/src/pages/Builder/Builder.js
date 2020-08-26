@@ -166,7 +166,7 @@ class Builder extends Component {
                     <br/>
                     <div className="row">
                         <div className="col-sm-4"/>
-                        <button type="button" className="btn btn-secondary btn-gray" onClick={this.showModal} value ="Show Modal">Show Build Starship</button>
+                        <button type="button" className="btn btn-secondary btn-gray" onClick={this.showModal} value ="Show Modal">Show Built Starship</button>
                         <div className="col-sm-1"/>
                         <button type="button" className="btn btn-light" onClick={this.showExitModal} value="show Exit Modal">Exit Builder</button>
                         <div className="col-sm-4"/>
