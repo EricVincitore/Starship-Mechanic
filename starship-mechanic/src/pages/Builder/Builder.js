@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/Footer';
 import AllParts from '../../components/AllParts/AllParts';
 import Modal from './../../components/Modal/Modal';
 import ParticlesBg from "particles-bg";
+
 import ExitModal from './../../components/ExitModal/ExitModal'
 
 class Builder extends Component {
@@ -39,7 +40,7 @@ class Builder extends Component {
                 img: "https://emailtuna.com/images/newsletter/6f7/6f7aa63c13dbb8c972c00db0364f3cf3.jpg"
             },
             {
-                id:4,
+                id:5,
                 name: "Warp Drive",
                 selected: false,
                 price: 700000000,
