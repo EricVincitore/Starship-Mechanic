@@ -8,16 +8,14 @@ const footer = {
     bottom: 0,
     width:"100%",
     position:"fixed"
-}
+};
 
 class Footer extends Component {
 
     render () {
 
         return (
-            <nav className="navbar navbar-light bg-dark" style={footer}>
-            
-            </nav>
+            <nav className="navbar navbar-light bg-dark " style={footer}></nav>
         );
     };
 };

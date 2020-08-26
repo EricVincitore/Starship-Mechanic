@@ -8,8 +8,8 @@ class SpacePart extends Component {
             return "Yes"
         } else {
             return "No"
-        }
-    }
+        };
+    };
     
 
     render () {
@@ -27,7 +27,7 @@ class SpacePart extends Component {
                     </div>
                 </div>
             </div>
-        )
+        );
 
     };
 };

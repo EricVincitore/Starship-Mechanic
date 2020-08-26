@@ -8,7 +8,7 @@ function Jumbotron () {
                 <p className="lead">Welcome to the garage. All the parts you need to craft your ship are here. </p>
             </div>
         </div>
-    )
+    );
 };
 
 export default Jumbotron;

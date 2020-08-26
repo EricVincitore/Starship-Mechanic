@@ -7,7 +7,7 @@ class ExitModal extends Component {
 
         if(!this.props.showExit){
             return null;
-        }
+        };
 
         return (
             <div className="backdropStyle">
@@ -33,9 +33,9 @@ class ExitModal extends Component {
                     <div className="col-sm-3"/>
                 </div>
             </div>
-        )
-    }
+        );
+    };
 
-}
+};
 
 export default ExitModal;

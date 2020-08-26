@@ -19,7 +19,7 @@ class AllParts extends Component {
                 />
                 
             </div>
-        ))
+        ));
     };
 };
 

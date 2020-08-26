@@ -4,7 +4,6 @@ import Footer from '../../components/Footer/Footer';
 import AllParts from '../../components/AllParts/AllParts';
 import Modal from './../../components/Modal/Modal';
 import ParticlesBg from "particles-bg";
-
 import ExitModal from './../../components/ExitModal/ExitModal'
 
 class Builder extends Component {
@@ -112,7 +111,7 @@ class Builder extends Component {
                 }
                 return part;
             })
-        })
+        });
     };
 
     showModal = () => {
@@ -126,16 +125,16 @@ class Builder extends Component {
             priceTotal: finalPrice,
             show: !this.state.show
         });
-    }
+    };
 
     getFinalNames = () => {
 
-        const listItems = this.state.selectedParts.map(part => <li>{part.name}</li>)
+        const listItems = this.state.selectedParts.map(part => <li>{part.name}</li>);
 
         return(
             <ul>{listItems}</ul>
-        )
-    }
+        );
+    };
 
     showExitModal = () => {
 
@@ -149,7 +148,7 @@ class Builder extends Component {
             priceTotal: finalPrice,
             exitShow: !this.state.exitShow
         });
-    }
+    };
 
     render () {
         return (
@@ -206,7 +205,7 @@ class Builder extends Component {
                 <ParticlesBg type="cobweb" color="#5dbcd2" bg={true}/>
             </div>
         );
-    }
+    };
 };
 
 export default Builder;
