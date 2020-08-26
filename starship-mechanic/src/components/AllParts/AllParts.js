@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import SpacePart from './SpacePart';
+import SpacePart from '../SpacePart/SpacePart';
 import PropTypes from 'prop-types'
 
 class AllParts extends Component {

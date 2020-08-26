@@ -1,19 +1,12 @@
 import React, {Component} from 'react';
-import Jumbotron from '../../components/Jumbotron';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import Jumbotron from '../../components/Jumbotron/Jumbotron';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 import ParticlesBg from "particles-bg";
 import {Link} from 'react-router-dom';
 
 
 class MainMenu extends Component {
-
-    constructor() {
-        super();
-        this.state = {
-          name: "React"
-        };
-    }
 
     render () {
 

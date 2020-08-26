@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import AllParts from '../../components/AllParts';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import AllParts from '../../components/AllParts/AllParts';
 import Modal from './../../components/Modal/Modal';
 import ParticlesBg from "particles-bg";
 import ExitModal from './../../components/ExitModal/ExitModal'
@@ -97,9 +97,11 @@ class Builder extends Component {
 
             }
         ],
-        selectedParts: [],
+        selectedParts:[],
+        priceTotal: 0,
         show: false
     };
+
 
     markSelected = id => {
         this.setState({
@@ -112,30 +114,36 @@ class Builder extends Component {
         })
     };
 
-    finalizeSelectedParts = (id, selected) => {
-        this.state.parts.forEach(part => {
-            if (part.selected === true) {
-                console.log(part.name)
-                this.setState({
-                    selectedParts: this.part.id
-                })
-            }
-            console.log(this.state.selectedParts)       
-        })
-    };
-
     showModal = () => {
+        let finalSelection = this.state.parts.filter(parts => parts.selected === true);
+
+        let finalPrice = finalSelection.reduce((total, part) => total + part.price,0);
+
         this.setState({
             ...this.state,
+            selectedParts: finalSelection,
+            priceTotal: finalPrice,
             show: !this.state.show
-        })
+        });
+    }
+
+    getFinalNames = () => {
+
+        const listItems = this.state.selectedParts.map(part => <li>{part.name}</li>)
+
+        return(
+            <ul>{listItems}</ul>
+        )
     }
 
     showExitModal = () => {
+
+        this.finalStats();
+
         this.setState({
             ...this.state,
             exitShow: !this.state.exitShow
-        })
+        });
     }
 
     render () {
@@ -159,17 +167,29 @@ class Builder extends Component {
                         <div className="col-sm-4"/>
                     </div>
                 </div>
-                <Modal onClose={this.showModal} show={this.state.show}> This message is form modal</Modal>
-                <ExitModal showExit={this.state.exitShow}>This is from Exit Modal</ExitModal>
+                <Modal onClose={this.showModal} show={this.state.show}> 
+                    <div className="row listTitle"> 
+                        Selected Parts
+                    </div>
+                    <div className="row">
+                        <ul className="list">
+                            {this.getFinalNames()}
+                        </ul>
+                    </div>
+                    <div className="row">
+                        Price Total in USD: {this.state.priceTotal}
+                    </div>
+                </Modal>
+                <ExitModal showExit={this.state.exitShow}>
+                    This is from Exit Modal
+                </ExitModal>
                 <br/>
 
                 <Footer />
                 <ParticlesBg type="cobweb" color="#5dbcd2" bg={true}/>
             </div>
-            
-
         );
     }
-}
+};
 
 export default Builder;

@@ -25,7 +25,7 @@ class ExitModal extends Component {
                             <div className="builderModalStyle">
                                 {this.props.children}
                                 <div className="builderModalFooter">
-                                    <Link to="/" className="btn btn-secondary">Exit to Main Menu</Link>
+                                    <Link to="/" className="btn btn-secondary endModalBtn">Exit to Main Menu</Link>
                                 </div>
                             </div>
                         </div>
